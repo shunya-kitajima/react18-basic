@@ -30,6 +30,12 @@ export const NavBar: React.FC = () => {
           >
             Nested-Suspense
           </Link>
+          <Link
+            to="/concurrent"
+            className="rounded px-3 py-2 text-gray-300 hover:bg-gray-700"
+          >
+            startTransition
+          </Link>
         </div>
       </div>
     </nav>
