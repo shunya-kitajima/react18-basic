@@ -29,7 +29,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/autobatch" element={<AutoBatch />} />
         <Route path="/suspense" element={<SuspenseDemo />} />
-        <Route path="/suspense" element={<NestedSuspense />} />
+        <Route path="/nested_suspense" element={<NestedSuspense />} />
       </Routes>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
