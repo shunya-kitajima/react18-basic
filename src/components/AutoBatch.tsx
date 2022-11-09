@@ -8,6 +8,11 @@ export const AutoBatch: React.FC = () => {
   const [fetchCount, setFetchCount] = useState(0)
   const [users, setUsers] = useState([])
 
+  const clickHandler = () => {
+    setCount((count) => count + 1)
+    setFetchCount((fetchCount) => fetchCount + 1)
+  }
+
   console.log('Rendered AutoBatch')
 
   return (
