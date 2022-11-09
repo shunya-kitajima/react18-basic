@@ -18,6 +18,18 @@ export const SuspenseDemo: React.FC = () => {
       >
         <Suspense fallback={<Spinner />}>
           <FetchUsers />
+          <FetchTasks />
+          <FetchComments />
+        </Suspense>
+      </ErrorBoundary>
+
+      <ErrorBoundary
+        fallback={
+          <ExclamationCircleIcon className="my-5 h-10 w-10 text-pink-500" />
+        }
+      >
+        <Suspense fallback={<Spinner />}>
+          <FetchUsers />
         </Suspense>
       </ErrorBoundary>
       <ErrorBoundary
