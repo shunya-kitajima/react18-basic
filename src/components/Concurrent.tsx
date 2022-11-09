@@ -6,6 +6,7 @@ export const Concurrent: React.FC = () => {
   const [photos, setPhotos] = useState([])
   const [searchKey, setSearchKey] = useState('')
   const [input, setInput] = useState('')
+  const [isPending, startTransition] = useTransition()
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
@@ -20,19 +21,24 @@ export const Concurrent: React.FC = () => {
   })
 
   const updateHandler = (e: ChangeEvent<HTMLInputElement>): void => {
-    setSearchKey(e.target.value)
+    setInput(e.target.value)
+    startTransition(() => setSearchKey(e.target.value))
   }
 
   return (
     <div className="flex flex-col items-center font-mono text-gray-600">
       <NavBar />
-      <p className="my-3 text-xl font-bold text-blue-500">
+      <p
+        className={`my-3 text-xl font-bold ${
+          isPending ? 'text-pink-500' : 'text-blue-500'
+        }`}
+      >
         startTransition (concurrent feature)
       </p>
       <input
         type="text"
         className="mb-5 rounded border border-gray-300 px-3 py-1 text-xs"
-        value={searchKey}
+        value={input}
         onChange={updateHandler}
       />
       {filteredPhoto.map((photo: any) => (
