@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query'
 import axios from 'axios'
-import { delay } from '../../utils/fetchDelay'
+import { delay } from '../utils/fetchDelay'
 
 export const useQueryTasks = () => {
   const getTasks = async (): Promise<any> => {
