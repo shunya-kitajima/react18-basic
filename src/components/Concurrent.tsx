@@ -1,10 +1,11 @@
-import React, { useState, useEffect, ChangeEvent } from 'react'
+import React, { useState, useEffect, ChangeEvent, useTransition } from 'react'
 import axios from 'axios'
 import { NavBar } from './NavBar'
 
 export const Concurrent: React.FC = () => {
   const [photos, setPhotos] = useState([])
   const [searchKey, setSearchKey] = useState('')
+  const [input, setInput] = useState('')
 
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
