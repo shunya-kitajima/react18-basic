@@ -3,7 +3,7 @@ import axios from 'axios'
 import { NavBar } from './NavBar'
 
 export const Concurrent: React.FC = () => {
-  const [photos, setPhotos] = useState('')
+  const [photos, setPhotos] = useState([])
   const [searchKey, setSearchKey] = useState('')
 
   useEffect(() => {
@@ -13,6 +13,10 @@ export const Concurrent: React.FC = () => {
     }
     fetchData()
   }, [])
+
+  const filteredPhoto = photos.filter((photo: any) => {
+    return photo.title.includes(searchKey)
+  })
 
   return <div>Concurrent</div>
 }
