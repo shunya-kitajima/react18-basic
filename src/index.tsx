@@ -27,7 +27,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/autobatch" element={<AutoBatch />} />
-        <Route path='/suspense' element={<SuspenseDemo />}
+        <Route path="/suspense" element={<SuspenseDemo />} />
       </Routes>
     </BrowserRouter>
     <ReactQueryDevtools initialIsOpen={false} />
