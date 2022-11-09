@@ -14,6 +14,12 @@ export const AutoBatch: React.FC = () => {
     <Layout>
       <p className="my-3 text-xl font-bold text-blue-500">AutoBatch</p>
       <p className="my-5">{fetchCount}</p>
+      <button
+        className="my-5 rounded bg-indigo-600 px-3 py-1 text-white hover:bg-indigo-500"
+        onClick={clickHandler}
+      >
+        click
+      </button>
     </Layout>
   )
 }
