@@ -6,7 +6,7 @@ export const FetchComments: React.FC = () => {
 
   return (
     <div className="my-3 text-center">
-      <p className="my-3 font-bold">Task List</p>
+      <p className="my-3 font-bold">Comment List</p>
       {data?.map((comment: any) => (
         <p className="my-3 text-sm" key={comment.id}>
           {comment.name}
