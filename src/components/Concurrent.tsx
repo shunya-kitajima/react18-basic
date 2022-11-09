@@ -34,6 +34,11 @@ export const Concurrent: React.FC = () => {
         value={searchKey}
         onChange={updateHandler}
       />
+      {filteredPhoto.map((photo: any) => (
+        <p className="mb-2 text-xs" key={photo.id}>
+          {photo.title}
+        </p>
+      ))}
     </div>
   )
 }
