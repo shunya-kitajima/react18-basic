@@ -14,5 +14,6 @@ export const useQueryComments = () => {
   return useQuery({
     queryKey: ['comments'],
     queryFn: getComments,
+    staleTime: Infinity,
   })
 }
